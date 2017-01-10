@@ -1,11 +1,11 @@
-import React, {Component} from 'react';
-import {render} from 'react-dom';
-import {Button} from 'react-toolbox/lib/button';
+import React from 'react';
+import { render } from 'react-dom';
 import AppBar from 'react-toolbox/lib/app_bar';
 import Navigation from 'react-toolbox/lib/navigation';
-import Link from 'react-toolbox/lib/Link';
+import Link from 'react-toolbox/lib/link';
 import appStyle from './app.scss';
 import SmallNote from './components/SmallNote'
+
 
 class App extends Component {
     render() {
@@ -44,6 +44,6 @@ class App extends Component {
 }
 
 render(
-    <App />,
-    document.getElementById('app')
+  <App />,
+  document.getElementById('app')
 );
