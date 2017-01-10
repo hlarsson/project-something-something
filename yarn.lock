@@ -2755,6 +2755,10 @@ map-obj@^1.0.0, map-obj@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/map-obj/-/map-obj-1.0.1.tgz#d933ceb9205d82bdcf4886f6742bdc2b4dea146d"
 
+material-design-icons@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/material-design-icons/-/material-design-icons-3.0.1.tgz#9a71c48747218ebca51e51a66da682038cdcb7bf"
+
 materialize-css@^0.97.8:
   version "0.97.8"
   resolved "https://registry.yarnpkg.com/materialize-css/-/materialize-css-0.97.8.tgz#e39ce2056785b0c4e9cd4847c2cdf153e19c47cf"
@@ -4474,6 +4478,10 @@ watchpack@^1.0.0:
     async "^2.1.2"
     chokidar "^1.4.3"
     graceful-fs "^4.1.2"
+
+webfontloader@^1.6.27:
+  version "1.6.27"
+  resolved "https://registry.yarnpkg.com/webfontloader/-/webfontloader-1.6.27.tgz#c3899649b0653aa57d0a23388f82409e0df224ba"
 
 webpack-dev-middleware@^1.4.0:
   version "1.9.0"
