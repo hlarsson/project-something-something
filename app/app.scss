@@ -1,3 +1,7 @@
+body {
+  font-family: Roboto,Helvetica,Arial,sans-serif;
+}
+
 .mainWrapper {
   display: flex;
   min-height: 100vh;
@@ -16,4 +20,14 @@
 .rightContent {
   /* 12em is the width of the columns */
   flex: 0 0 12em;
+}
+
+.grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.gridCol {
+  flex: 1;
 }
