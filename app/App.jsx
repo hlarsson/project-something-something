@@ -1,8 +1,8 @@
 import React from 'react';
-import { render } from 'react-dom';
 import AppBar from 'react-toolbox/lib/app_bar';
 import appStyle from './app.scss';
 import SmallNote from './components/SmallNote';
+import { connect } from 'react-redux';
 
 const App = () => {
   return (
@@ -37,7 +37,8 @@ const App = () => {
   );
 };
 
-render(
-  <App />,
-  document.getElementById('app')
-);
+function mapStateToProps(state) {
+  return state;
+}
+
+export default connect(mapStateToProps)(App);
