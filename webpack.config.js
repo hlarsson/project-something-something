@@ -11,13 +11,14 @@ module.exports = {
   },
   module: {
     rules: [
-      
+      /*
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         loader: 'eslint-loader?fix=true',
         enforce: 'pre'
       },
+      */
       
       {
         test: /\.(js|jsx)$/,
@@ -33,7 +34,7 @@ module.exports = {
         test: /\.scss$/,
         loaders: ['style-loader',
           'css-loader?sourceMap&-minimize&modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]',
-          'postcss-loader',
+          //'postcss-loader',
           'sass-loader?sourceMap']
       },
       {
