@@ -1,10 +1,18 @@
 import { USER_LOGIN_REQUEST } from '../actions/types'
-import { userLoginSuccess } from '../actions/creators'
+import { userLoginSuccess, userLoginFailure } from '../actions/creators'
+import { ajax } from 'rxjs/observable/dom/ajax';
+import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/mergeMap';
-import ajax from 'rxjs/add/observable/dom/ajax';
+import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/catch';
+import 'rxjs/add/operator/do';
+import 'rxjs/add/observable/of';
 
 export default action$ => 
     action$.ofType(USER_LOGIN_REQUEST)
+        .do(console.log)
         .mergeMap(action =>
             ajax.getJSON('http://localhost:3000/login')
-                .map(response => userLoginSuccess));
+                .map(response => userLoginSuccess)
+                    .catch(error => Observable.of(userLoginFailure(error)))
+                );
