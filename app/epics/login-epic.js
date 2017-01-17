@@ -12,7 +12,7 @@ export default action$ =>
     action$.ofType(USER_LOGIN_REQUEST)
         .do(console.log)
         .mergeMap(action =>
-            ajax.getJSON('http://localhost:3000/login')
+            ajax.getJSON('/login')
                 .map(response => userLoginSuccess)
                     .catch(error => Observable.of(userLoginFailure(error)))
                 );

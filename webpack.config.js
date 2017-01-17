@@ -69,7 +69,13 @@ module.exports = {
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
     compress: true,
-    port: 8081
+    port: 8081,
+    proxy: {
+      '/login': {
+        target: 'http://localhost:3000/login',
+        secure: false
+      }
+    }
   },
 
   devtool: 'source-map'
