@@ -14,5 +14,5 @@ export default action$ =>
         .mergeMap(action =>
             ajax.getJSON('/login')
                 .map(response => userLoginSuccess)
-                    .catch(error => Observable.of(userLoginFailure(error)))
-                );
+                .catch(error => Observable.of(userLoginFailure(error)))
+            );

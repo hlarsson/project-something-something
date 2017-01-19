@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "build": "webpack",
-    "dev": "webpack-dev-server --open"
+    "dev": "node server --open"
   },
   "author": "Sebastian Lindström <sebastian.lindstrom@gmail.com>",
   "contributors": [
@@ -49,7 +49,7 @@
     "sass-loader": "^4.1.1",
     "style-loader": "^0.13.1",
     "webfontloader": "^1.6.27",
-    "webpack": "^2.2.0-rc.1",
+    "webpack": "^2.2.0",
     "webpack-dev-server": "^1.16.2"
   }
 }
