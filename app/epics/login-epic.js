@@ -2,7 +2,7 @@ import { USER_LOGIN_REQUEST, USER_LOGIN_SUCCESS } from '../actions/types'
 import { userLoginSuccess, userLoginFailure } from '../actions/creators'
 import { ajax } from 'rxjs/observable/dom/ajax';
 import { Observable } from 'rxjs/Observable';
-import { push, replace } from 'react-router-redux'
+import { replace } from 'react-router-redux'
 import 'rxjs/add/operator/mergeMap';
 import 'rxjs/add/operator/mapTo';
 import 'rxjs/add/operator/catch';
@@ -19,4 +19,4 @@ export const loginRequestEpic = action$ =>
 
 export const loginSuccessEpic = action$ => 
     action$.ofType(USER_LOGIN_SUCCESS)
-        .mapTo(push('/home'));
+        .mapTo(replace('/home'));
