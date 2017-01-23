@@ -3,8 +3,12 @@ import { createStore, applyMiddleware, compose } from 'redux'
 import rootReducer from './reducers'
 import { createEpicMiddleware } from 'redux-observable';
 import { rootEpic } from './epics';
+import { routerMiddleware, push } from 'react-router-redux'
+import { browserHistory } from 'react-router'
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+
+const routerBrowserhistoryMiddleware = routerMiddleware(browserHistory);
 
 /*
 const rootEpicCatch = rootEpic.catch(err => {
@@ -23,7 +27,8 @@ export default function configureStore( /*preloadedState*/ ) {
     //preloadedState,
     composeEnhancers(
         applyMiddleware(
-            epicMiddleware
+            epicMiddleware,
+            routerBrowserhistoryMiddleware
         //loggerMiddleware
         )
     )
