@@ -1,9 +1,10 @@
 import React from 'react';
 import AppBar from 'react-toolbox/lib/app_bar';
 import appStyle from './app.scss';
-import { connect } from 'react-redux';
+import { doAuthentication } from './actions/creators';
 
 const App = ({children}) => {
+  doAuthentication();
   return (
     <div className={appStyle.mainWrapper}>
       <AppBar title="Note thingie app bar" />

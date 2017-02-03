@@ -23,14 +23,25 @@ class Login extends Component {
       this.props.actions.userLoginRequest(this.state.username, this.state.password);
     }
 
+    _onShowLock = () => {
+      this.props.actions.showLock();
+    }
+
+    _onLogout = () => {
+      this.props.actions.logout();
+    }
+
   render(){
+    const { dispatch } = this.props;
     return (
       <div>
           <h1>Login</h1>
           <section>
-            <Input type='text' hint='Enter your username' label='Username' name='username' value={this.state.username} onChange={this._onUsernameChange} maxLength={16} />
-            <Input type='password' hint='Enter your password' name='name' value={this.state.password} onChange={this._onPasswordChange} maxLength={16} />
-            <Button label='Sign in' onClick={this._onSigninButtonClicked} />
+            {
+              this.props.authenticated ?
+                <Button label='Logout' onClick={this._onLogout} /> :
+                <Button label='Login' onClick={() => dispatch(this.props.actions.showLock())} />
+            }
           </section>
       </div>
     );

@@ -16,7 +16,7 @@ app.use(webpackHotMiddleware(compiler, {
     log: console.log
 }))
 
-app.get('/login', (req, res) => {
+app.post('/login', (req, res) => {
     res.send({status: 'success'});
 });
 app.listen(3000, () => {
